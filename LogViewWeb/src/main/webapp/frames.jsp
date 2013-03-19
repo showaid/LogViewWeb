@@ -63,7 +63,7 @@ if (
 <table id="rounded-corner" style="width: 180px; align: left">
 <tbody>
 <tr>
-<td><a target="_blank" href="https://github.com/showaid/improved-logview-web/wiki">Online documentation</a><br/></td>
+<td><a target="_blank" href="https://github.com/showaid/LogViewWeb/wiki">Online documentation</a><br/></td>
 </tr>
 <tr>
 <td><a target="_blank" href="https://github.com/showaid/improved-logview-web/issues/new">Report an issue</a><br/></td>
