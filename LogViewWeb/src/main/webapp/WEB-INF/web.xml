@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4"
+xmlns="http://java.sun.com/xml/ns/j2ee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<display-name>LogView</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file> 
+	</welcome-file-list>
+
+<!--
+	<listener>
+		<listener-class>logview.Listener</listener-class>
+	</listener>
+-->
+
+    <servlet>
+		<servlet-name>view</servlet-name>
+		<servlet-class>logview.ViewServlet</servlet-class>
+		<load-on-startup>100</load-on-startup>
+		
+	</servlet>
+	
+    <servlet>
+		<servlet-name>edit</servlet-name>
+		<servlet-class>logview.EditServlet</servlet-class>
+		<load-on-startup>80</load-on-startup>
+	</servlet>
+
+    <servlet>
+		<servlet-name>saveall</servlet-name>
+		<servlet-class>logview.SaveAllServlet</servlet-class>
+		<load-on-startup>140</load-on-startup>
+	</servlet>
+
+    <servlet>
+		<servlet-name>remove</servlet-name>
+		<servlet-class>logview.RemoveServlet</servlet-class>
+		<load-on-startup>160</load-on-startup>
+	</servlet>
+
+    <servlet>
+		<servlet-name>smartaddlog</servlet-name>
+		<servlet-class>logview.SmartAddLogServlet</servlet-class>
+		<load-on-startup>180</load-on-startup>
+		<!-- 
+		uncomment this to provide basic security settings to not allow anyone to add a logfile
+		<security-role-ref>
+			<role-name>smartadd</role-name>
+			<role-link>addlog</role-link>
+		</security-role-ref>
+		 -->
+	</servlet>
+
+    <servlet>
+		<servlet-name>live</servlet-name>
+		<servlet-class>logview.LiveServlet</servlet-class>
+		<load-on-startup>200</load-on-startup>
+	</servlet>
+
+    <servlet>
+		<servlet-name>add</servlet-name>
+		<servlet-class>logview.AddServlet</servlet-class>
+		<load-on-startup>120</load-on-startup>
+		<!-- 
+		uncomment this to provide basic security settings to not allow anyone to add a logfile
+		<security-role-ref>
+			<role-name>smartadd</role-name>
+			<role-link>addlog</role-link>
+		</security-role-ref>
+		 -->
+	</servlet>
+
+    <servlet>
+		<servlet-name>init</servlet-name>
+		<servlet-class>logview.InitServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+    <servlet>
+		<servlet-name>list</servlet-name>
+		<servlet-class>logview.ListServlet</servlet-class>
+		<load-on-startup>60</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>list</servlet-name>
+		<url-pattern>/list</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>saveall</servlet-name>
+		<url-pattern>/saveall</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>remove</servlet-name>
+		<url-pattern>/remove</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>smartaddlog</servlet-name>
+		<url-pattern>/smartaddlog</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>live</servlet-name>
+		<url-pattern>*.live</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>edit</servlet-name>
+		<url-pattern>/edit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>add</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>view</servlet-name>
+		<url-pattern>*.view</url-pattern>
+	</servlet-mapping>
+	
+	<error-page>
+		<exception-type>java.util.NoSuchElementException</exception-type>
+		<location>/errors/nosuchelement.jsp</location>
+	</error-page>
+
+<!--
+	uncomment this to provide basic security settings to not allow anyone to add a logfile
+	 	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>add reosources</web-resource-name>
+			<url-pattern>/smartaddlog*</url-pattern>
+			<url-pattern>/add*</url-pattern>
+			<url-pattern>/smartaddlog</url-pattern>
+			<url-pattern>/add</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>addlog</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>Authentication required</realm-name>
+	</login-config>
+		
+    <security-role>
+    	<description>enable registering a new logfile in the system to be showed 
+    	by the application</description>
+    	<role-name>addlog</role-name>
+    </security-role>
+ -->
+	
+</web-app>
