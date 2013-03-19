@@ -66,7 +66,7 @@ if (
 <td><a target="_blank" href="https://github.com/showaid/LogViewWeb/wiki">Online documentation</a><br/></td>
 </tr>
 <tr>
-<td><a target="_blank" href="https://github.com/showaid/improved-logview-web/issues/new">Report an issue</a><br/></td>
+<td><a target="_blank" href="https://github.com/showaid/LogViewWeb/issues/new">Report an issue</a><br/></td>
 </tr>
 </tbody>
 </table>
