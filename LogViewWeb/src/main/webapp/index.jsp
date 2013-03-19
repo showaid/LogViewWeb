@@ -19,7 +19,7 @@ It may however, be installed or activated for specific tracing purposes.</p>
 
 <p>Improved LogView is based on Open Source project logview-web hosted at <a href="http://code.google.com/p/logview-web/">
 http://code.google.com/p/logview-web/</a>.<br>
-This version of application is hosted at <a href="http://github.com/showaid/improved-logview-web.git">
+This version of application is hosted at <a href="https://github.com/showaid/LogViewWeb.git">
 http://github.com/showaid/improved-logview-web.git</a>.
 
 <p style="text-align: center; font-size: large; font-weight: bold;"><a href="frames.jsp">Enter the application</a>
